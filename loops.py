@@ -21,8 +21,15 @@ users = {
 }
 
 
+users_dict = users.items()
+print(users_dict)
+
 for index, status in enumerate(users):
     print(index, status)
+
+for user in users.keys():
+    for status in users.values():
+        print(user, status)
 
 #  looping through a sequence of numbers
 for digit in range(0, 100, 10):
@@ -56,21 +63,21 @@ for i in range(5):
 
 # try ... expect controls how the program proceeds when an error occurs
 
-try:
-    answer = 12 / 0
-    print(answer)
-except:
-    print('An error occurred')
+# try:
+#     answer = 12 / 0
+#     print(answer)
+# except:
+#     print('An error occurred')
 
-try:
-    userInput1 = int(input("Please enter a number: "))
-    userInput2 = int(input("Please enter another number: "))
-    answer = userInput1/userInput2
-    print("The answer is ", answer)
-    myFile = open("missing.txt", 'r')
-except ValueError:
-    print("Error: You did not enter a number")
-except ZeroDivisionError:
-    print("Error: Cannot divide by zero")
-except Exception as e:
-    print("Unknown error: ", e)
+# try:
+#     userInput1 = int(input("Please enter a number: "))
+#     userInput2 = int(input("Please enter another number: "))
+#     answer = userInput1/userInput2
+#     print("The answer is ", answer)
+#     myFile = open("missing.txt", 'r')
+# except ValueError:
+#         print("Error: You did not enter a number")
+# except ZeroDivisionError:
+#         print("Error: Cannot divide by zero")
+# except Exception as e:
+#         print("Unknown error: ", e)
